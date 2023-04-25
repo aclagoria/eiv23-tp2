@@ -78,9 +78,10 @@ void ordenar_en_sitio_menor_a_mayor(int32_t n,int32_t *b)
     k = n - 1;
     for(int i=k; i>0; --i)
     {
-        j = posicion_maximo(int32_t k+1,const int32_t *b);
-        x = b[k];
-        b[k] = b[j];
+        j = posicion_maximo(i+1, b);
+        x = b[i];
+        b[i] = b[j];
         b[j] = x;
     }
 }
+
